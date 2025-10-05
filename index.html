@@ -1,1 +1,69 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReviewHub — Affiliate Reviews & Guides</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<h1 class="logo">ReviewHub</h1>
+<p class="tagline">Honest affiliate reviews to help you decide</p>
+<div class="controls">
+<input id="search" class="search" type="search" placeholder="Search reviews, features, brands..." aria-label="Search reviews">
+<select id="sort" class="select" aria-label="Sort reviews">
+<option value="featured">Featured</option>
+<option value="rating-desc">Top Rated</option>
+<option value="rating-asc">Lowest Rated</option>
+<option value="popular">Most Clicked</option>
+<option value="newest">Newest</option>
+</select>
+<select id="minRating" class="select" aria-label="Minimum rating filter">
+<option value="0">All ratings</option>
+<option value="4">4 stars & up</option>
+<option value="3">3 stars & up</option>
+<option value="2">2 stars & up</option>
+</select>
+<button id="themeToggle" class="btn small" aria-pressed="false">Toggle Theme</button>
+</div>
+</div>
+</header>
+<main class="container main">
+<section id="intro" class="intro">
+<h2>Welcome to ReviewHub</h2>
+<p>We curate and test products across categories and provide clear pros, cons and affiliate links. Use the filters and search to find the best fit for you.</p>
+</section>
+<section id="reviewsSection" class="reviews-section" aria-live="polite">
+<div id="reviewsList" class="reviews-list" ></div>
+<nav class="pagination" role="navigation" aria-label="Pagination">
+<button id="prevPage" class="btn">Prev</button>
+<span id="pageInfo" class="page-info">Page 1</span>
+<button id="nextPage" class="btn">Next</button>
+</nav>
+</section>
+<aside class="sidebar">
+<div class="widget">
+<h3>About Affiliate Links</h3>
+<p>We may earn a small commission when you buy through our links at no extra cost to you. Our reviews aim to be transparent and helpful.</p>
+</div>
+<div class="widget">
+<h3>Quick Filters</h3>
+<button data-cat="all" class="filter-btn btn">All</button>
+<button data-cat="electronics" class="filter-btn btn">Electronics</button>
+<button data-cat="home" class="filter-btn btn">Home</button>
+<button data-cat="outdoor" class="filter-btn btn">Outdoor</button>
+<button data-cat="software" class="filter-btn btn">Software</button>
+</div>
+</aside>
+</main>
+<footer class="site-footer">
+<div class="container">
+<p>&copy; 2025 ReviewHub — Built for informed choices</p>
+<p><a href="#" id="exportCsv">Export top clicked as CSV</a></p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
